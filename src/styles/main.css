@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+ 
+ 
+/*
+  AppBar
+*/
+ 
+.skip {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	background-color: aquamarine;
+	color: #2e2f2f;
+	padding: 20px 30px;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none
+}
+.skip:focus {
+	top: 10px;
+  outline: 4px dashed rgb(219, 150, 22);
+}
+#variation{
+  color: aquamarine;
+}
+.app-bar {
+  padding: 15px 16px;
+  background-color: #393E46;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+  
+}
+#hamburgerButton{
+  color: white;
+  
+  min-height: 44px;
+  min-width: 44px;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: #ffffff; 
+  font-size: 1.4em;  
+  user-select: none;
+}
+#navbarLogo{
+  min-height: 44px;
+  min-width: 44px;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #393E46;
+  overflow: hidden;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
+}
+.app-bar .app-bar__navigation ul li a:hover{
+  color: aquamarine;
+  transition: .3s;
+}
+
+
+
+/*
+ * jumbotron
+ */
+ .hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-position: center;
+  background-color: aquamarine;
+  }
+  
+  .hero-inner {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 36px;
+    text-shadow: 3px 3px #121314;
+  }
+  .hero-title #variation-title {
+    color: aquamarine;
+  }
+  
+  .hero-tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 3px 3px #121314;
+    
+  }
+
+
+/*
+  Main Content
+*/
+ 
+main {
+  padding: 32px;
+  flex: 1;
+}
+ 
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+.content h2{
+  text-align: center;
+}
+ 
+.content .content__heading {
+  font-weight: 600px;
+  color: #393E46;
+  
+}
+ 
+ 
+/*
+  restaurants
+*/
+ 
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+ 
+ 
+/*
+  restaurant Item
+*/
+ 
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+.restaurant-item__header {
+  position: relative;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+  max-height: 160px;
+  
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: #393E46;
+  color: white;
+}
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating:hover {
+  background-color: #6f7174;
+  transition: all 0.3s
+
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+ 
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+.restaurant-item .restaurant-item__content h4{
+  color: #393E46;
+}
+ 
+.restaurant-item .restaurant-item__content h3 a {
+  padding: 10px 10px 10px 0px;
+  color: rgb(59, 192, 148);
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+.restaurant-item .restaurant-item__content h3 a:hover {
+  color: rgb(98, 223, 181);
+  min-height: 44px;
+  min-width: 44px;
+}
+ 
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+ 
+ 
+/*
+  restaurant
+*/
+ 
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant__title {
+  color: rgb(59, 192, 148);
+}
+ 
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant .restaurant__info h3{
+ color: #393E46;
+
+}
+.restaurant .restaurant__info h4 {
+  color: #393E46;
+  margin: 8px 0;
+}
+.restaurant .restaurant__info .rating {
+  color: orange;
+  font-weight: 500;
+}
+.restaurant .restaurant__info .rincian {
+  color: #393E46;
+  font-weight: 500;
+}
+.restaurant__overview h3{
+  margin: 8px 0;
+  color: #393E46;
+}
+.restaurant__overview p{
+  color: #393E46;
+}
+
+
+.review{
+  font-size: 15px;
+  margin: 8px 0;;
+}
+.review .date {
+  font-size: 13px;
+  color: rgb(59, 192, 148);
+  
+}
+
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+ 
+ 
+/*
+  Footer
+*/
+ 
+footer {
+  background-color: #393E46;
+  padding: 20px;
+}
+ 
+footer p {
+  text-align: center;
+  color: #ffffff;
+}
